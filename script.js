@@ -11,7 +11,6 @@ function updateTime() {
     let hDisplay = document.getElementById("hDisplay");
     let mDisplay = document.getElementById("mDisplay");
     let sDisplay = document.getElementById("sDisplay");
-    let prevsec = second;
 
     if (hour != 0) {
         hPointer.style.transition = ".3s";
@@ -34,9 +33,9 @@ function updateTime() {
         removeAnim(sPointer, 360);
     }
 
-    hDisplay.innerHTML = hour >= 10 ? hour : "0" + hour;
-    mDisplay.innerHTML = minute >= 10 ? minute : "0" + minute;
-    sDisplay.innerHTML = second >= 10 ? second : "0" + second;
+    hDisplay.innerText = hour >= 10 ? hour : "0" + hour;
+    mDisplay.innerText = minute >= 10 ? minute : "0" + minute;
+    sDisplay.innerText = second >= 10 ? second : "0" + second;
 }
 
 function removeAnim(element, degrees) {
@@ -47,4 +46,4 @@ function removeAnim(element, degrees) {
     }, 300);
 }
 
-setInterval(updateTime, 100);
+setInterval(updateTime, 1000);

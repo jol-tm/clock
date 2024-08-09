@@ -21,18 +21,18 @@
 }
 
 body {
+    margin: 0;
     background-color: var(--c1);
     color: var(--c2);
-    transition: .5s;
 }
 
 #clockWrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5vw;
-    height: 95vh;
-    width: 95vw;
+    gap: 3vw;
+    height: 100vh;
+    width: 100vw;
 }
 
 #clockShape {
@@ -81,4 +81,7 @@ body {
     flex-direction: column;
     font-family: "Arial";
     font-size: 5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: inset 0 0 1rem var(--c3);
 }
